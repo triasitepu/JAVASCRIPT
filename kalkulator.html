@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <script src="css/main.js"></script>
+  
+</head>
+
+<body>
+    <input type="text" nama="nama" id="nama_user" value="">
+    
+</body>
+<script>
+//   $(document).ready( function(){
+
+
+
+        
+//     }
+//     );
+    //Variabel
+    var angka1 =10; //dianggap sebagai huruf
+    let angka2 = '10'; //daianggap sebagai nomer
+    const PI = 3.14; //nama konstanta dibaca sebagai huruf besar semua
+    console.log(PI);
+    //function
+    function f_tambah(a,b) {
+        let hasil =a =b;
+        return hasil;
+    } 
+    //objek
+    let es_jeruk = {
+        es : "batu",
+        air : "kran",
+        jeruk : "jeruk bali"
+    }
+    //cara memanggilnya
+    console.log(es_jeruk.air)
+    es_jeruk['air'] = "galon"; 
+
+    let user = prompt('Masukkan Nama Anda');
+
+    let input=document.getElementById("nama_user");
+    input.value = user;
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jendela Dialog Basic dengan jQuery</title>
+</head>
+<style>
+  #dialog {
+    color: rebeccapurple;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:burlywood;
+    padding: 20px;
+    border: 1px solid #ddd;
+    z-index: 100; /* Menempatkan dialog di atas elemen lain */
+    display: none; /* Menyembunyikan dialog di awal */
+  }
+  
+  #dialog h1 {
+    margin-top: 0;
+  }
+  
+  #dialog button {
+    margin: 10px 0;
+  }
+  
+</style>
+<body>
+  <p> <h1> Jendela Basic Dialog</h1></p>
+  <button id="buka-dialog">Buka Dialog</button>
+
+  <div id="dialog" style="display: none;">
+    <h1>K-DRAMA Favorite</h1>
+  
+    <p>Berikut adalah beberapa K-DRAMA favorit saya:</p>
+  
+    <ul>
+      <li><b>Crash Landing on You </b> - Drama romantis yang menceritakan kisah cinta antara seorang wanita Korea Selatan yang mendarat di Korea Utara setelah kecelakaan paralayang.</li>
+      <li><b>Goblin</b> - Drama fantasi tentang seorang goblin yang mencari pengantinnya untuk mengakhiri hidupnya yang abadi.</li>
+      <li><b>Mr. Sunshine</b> - Drama sejarah yang berlatar di Korea pada awal abad ke-20 dan menceritakan kisah cinta antara seorang pria Korea-Amerika dan seorang wanita Korea.</li>
+      <li><b>Itaewon Class</b> - Drama tentang seorang pemuda yang memulai bisnisnya sendiri di Itaewon dan melawan perusahaan besar.</li>
+      <li><b>Hospital Playlist</b> - Drama medis tentang lima dokter yang telah berteman sejak sekolah kedokteran.</li>
+    </ul>
+    <button id="tutup-dialog">Tutup Dialog</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+    $("#buka-dialog").click(function() {
+      $("#dialog").show();
+    });
+  
+    $("#tutup-dialog").click(function() {
+      $("#dialog").hide();
+    });
+  });
+  
+  </script>
+</body>
+</html>

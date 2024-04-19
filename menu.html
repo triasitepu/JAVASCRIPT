@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membuat menu menggunakan JQuery</title>
+  
+</head>
+<style>
+    nav#main-nav {
+    background-color: #f0f0f0; 
+    padding: 10px;
+    border-bottom: 1px solid #ddd; 
+  }
+  
+  #menu {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #menu li {
+    display: inline-block;
+    margin: 15px;
+  }
+  
+  #menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold; 
+  }
+  
+  #menu li a:hover {
+    background-color:tan; 
+    color: blue;
+    transition: background-color 0.2s ease-in-out; 
+  }
+  
+  .active {
+    background-color: #ddd;
+    color: #333; 
+  }
+  
+</style>
+<body>
+  <nav id="main-nav">
+    <ul id="menu">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Tentang Saya</a></li>
+      <li><a href="#">Hobi</a></li>
+      <li><a href="#">Jadwal Perkuliahan</a></li>
+      <li><a href="#">Pendaftaran</a></li>
+    </ul>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#menu li").click(function() {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+    });
+  </script>
+</body>
+</html>

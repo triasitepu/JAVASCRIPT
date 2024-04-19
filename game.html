@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Angka</title>
+</head>
+<body>
+    <h1>Tebak Angka</h1>
+    <p>Silakan pikirkan angka dari 1 sampai 100</p>
+    
+    <form>
+        <label for="player"></label>
+        <input type="number" id="jawaban">
+        <input type="button" id="kirim" value="Kirim">
+
+        <p id="tanggapan"></p>
+    </form>
+
+    <script>
+        const random = Math.floor(Math.random()*100)+1;
+        console.log( random);
+
+        function cekJawaban() {
+            let j = document.getElementById('jawaban').value;
+            if ( j == random ) {
+                document.getElementById('tanggapan').textContent = "Jawaban Benar"
+            } else if ( j > random ) {
+                document.getElementById('tanggapan').textContent = "Jawaban Terlalu Besar"
+            } else if ( j < random ) {
+                document.getElementById('tanggapan').textContent = "Jawaban Terlalu kecil"
+            }
+        }
+
+        document.getElementById('kirim').addEventListener('click',cekJawaban);
+    </script>
+</body>
+</html>

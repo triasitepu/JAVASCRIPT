@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Contoh 1: Menyembunyikan/Menampilkan Elemen
+      $("#hide-button").click(function() {
+        $("#target-element").hide();
+      });
+      $("#show-button").click(function() {
+        $("#target-element").show();
+      });
+
+      // Contoh 2: Mengubah Warna Elemen
+      $("#change-color").click(function() {
+        $("#target-element").css("background-color", "red");
+      });
+
+      
+    });
+  </script>
+</head>
+<body>
+  <h1>Contoh Penggunaan jQuery Sederhana</h1>
+
+  <p id="target-element">Ini adalah elemen yang akan dimanipulasi</p>
+
+  <button id="hide-button">Sembunyikan</button>
+  <button id="show-button">Tampilkan</button>
+
+  <button id="change-color">Ubah Warna</button>
+</body>
+</html>
